@@ -4,10 +4,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const path = require('path');
-const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const mLabs = require('./database/db-connect')
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -19,10 +20,5 @@ app.listen(PORT, function(){
 	console.log(`Up and running on PORT: ${PORT}`);
 });
 
-// connect to the mongoDB
-// mongoose.connect('mongodb://localhost/utilities', {
-//     useMongoClient: true
-// });
-
-// load the api
-// apiController(app);
+// setup the connection to the db
+mLabs.DBconnect();
