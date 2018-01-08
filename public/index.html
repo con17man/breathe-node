@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="PiSensors">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/scripts/bulma/css/bulma.css">
     <title>Pi Sensors</title>
 </head>
-<body>
-    Hey, you! Whazzzzup??? :D
+
+<body ng-controller="MainController">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Pi Sensors</h1>
+            <p class="subtitle">{{test}}!</p>
+        </div>
+    </section>
 </body>
+
 </html>
