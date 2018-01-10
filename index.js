@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const path = require('path');
 
+const seed = require('./seed/airParamsSeeds');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -23,3 +25,5 @@ app.use('/scripts', express.static(path.join(__dirname, 'node_modules/')));
 app.listen(PORT, function(){
 	console.log(`Up and running on PORT: ${PORT}`);
 });
+
+seed(app);
