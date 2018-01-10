@@ -9,6 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const mLabs = require('./database/db-connect')
+// setup the connection to the db
+mLabs.DBconnect();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -19,6 +21,3 @@ app.use('/scripts', express.static(path.join(__dirname, 'node_modules/')));
 app.listen(PORT, function(){
 	console.log(`Up and running on PORT: ${PORT}`);
 });
-
-// setup the connection to the db
-mLabs.DBconnect();
