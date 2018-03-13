@@ -1,11 +1,16 @@
 'use strict';
 
-const app = angular.module('PiSensors', [])
+angular.module('piSensors', [
+    'ui.router',
+    // app modules
+    'piSensors.router',
+    'piSensors.login'
+])
 
-app.controller('MainController', mainController);
+.controller('MainController', mainController);
 
-mainController.$inject = [ '$scope' ];
+mainController.$inject = ['$scope'];
 
-function mainController( $scope ){
-  $scope.test = 'Angular is on';
+function mainController($scope) {
+    $scope.test = 'Angular is on';
 };
