@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     res.send('Hey! It works!');
 });
 
-router.post('/rpi/:temperature/:humidity/:presure/:gas_LPG/:gas_CO/:gas_smoke', catchErrors(airParamsController.addAirParams));
+router.get('/rpi/:temperature/:humidity/:presure/:gas_LPG/:gas_CO/:gas_smoke', catchErrors(airParamsController.addAirParams));
+router.get('/api/getLastMeasurements', catchErrors(airParamsController.getLastAirParams));
 
 module.exports = router;
