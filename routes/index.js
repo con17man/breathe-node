@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const airParamsController = require('../controllers/airParamsController');
+const userController = require('../controllers/userController');
 const { catchErrors } = require('../utils/errorHandlers');
 
 router.get('/', (req, res) => {
@@ -8,6 +9,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/rpi/:temperature/:humidity/:presure/:gas_LPG/:gas_CO/:gas_smoke', catchErrors(airParamsController.addAirParams));
+
+router.post('/api/register', catchErrors(userController.registerUser));
 router.get('/api/getLastMeasurements', catchErrors(airParamsController.getLastAirParams));
 
 module.exports = router;
