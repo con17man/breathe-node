@@ -3,7 +3,7 @@ const User = mongoose.model('User');
 
 exports.loginUser = async (req, res) => {
 
-    await User.findOne({ email: req.body.email }, (err, user) => {
+    await User.findOne({ username: req.body.username }, (err, user) => {
         if (err) {
             console.log('>>>error finding user', err);
         } else {
