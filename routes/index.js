@@ -16,6 +16,6 @@ router.post('/api/login', catchErrors(userController.loginUser));
 router.post('/api/register', catchErrors(userController.registerUser));
 
 // Fetch data APIs
-router.get('/api/getLastMeasurements', catchErrors(airParamsController.getLastAirParams));
+router.get('/api/sensor/last', catchErrors(airParamsController.getLastAirParams));
 
 module.exports = router;
