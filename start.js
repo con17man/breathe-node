@@ -26,6 +26,7 @@ mongoose.connection.on('error', (err) => {
 
 // import all of our models
 require('./models/AirParams');
+require('./models/AirParamsLimits');
 require('./models/User');
 
 // Start our app!
