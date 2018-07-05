@@ -1,7 +1,7 @@
 # pi-sensors
 ### Studenti:
 
-##### Carmen-Maria Jugarean & Mihai-George Ignat
+##### Carmen-Maria Jugarean
 
 ###### UPB, FILS, 2018
 
